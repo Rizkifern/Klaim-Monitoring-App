@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Anchor dari Claim List, isinya berbeda tiap list -->
+</head>
+<body id="report">
+    <header>
+        <!-- Nomor Polis dan Nomor Klaim jika sudah ada -->
+        <!-- Nama Tertanggung, DOL -->
+        <h1 id="headerTertanggung">PT Harmoni</h1> 
+        <p id="headerDetail">0101012200094 ; Banjir ; 23-Sep-2021</p>
+    </header>
+    <main>
+        <section>
+            <!-- SIDE MENU -->
+            <!-- anchor ke bagian2 surv report, adjustment, documents -->
+            <!-- TOMBOL FUNGSIONAL print Final Report, Print claim ACC, to Polis, To Clauses -->
+        </section>
+        <section id="reportSection">
+            <!-- Isi Report -->
+            <!--  -->
+            
+                
+            <table class="dataPolis">
+                <!-- data Klaim -->
+                <tr>
+                    <td class="firstCol">Polis</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportPolis">0101012200094</td>
+                </tr>
+                <tr>
+                    <td class="firstCol" >No. Claim</td>
+                    <td>:</td>
+                    <td class="dataCol"><input type="text" id="reportNoClaim" style="margin:0"></td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Jaminan Polis</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportJaminan">PAR</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Tertanggung</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportTertanggung">PT Harmoni</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Periode Pertanggungan</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportPeriode">30 Nov 2021 - 30 Nov 2022</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Sum Insured</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportSI">Rp. 3,000,000,000</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Lokasi Objek Pertanggungan Pada Polis</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportLokasiPolis">Jl. Jenderal Sudirman No.Kav. 13-15, RT.10/RW.11, Karet Tengsin, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250 </td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Lokasi Kejadian</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportLokasiKejadian">Jl. Jenderal Sudirman No.Kav. 13-15, RT.10/RW.11, Karet Tengsin, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250 </td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Okupansi</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportOkupansi" >Kantor</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">DoL</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportDol">23-Sep-2021</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Tanggal Masuk Laporan</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportDml">23-Sep-2021</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Cause</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportPenyebab">Banjir</td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Nilai Klaim</td>
+                    <td>:</td>
+                    <td class="dataCol"><input type="text" id="reportNilaiKlaim" style="margin:0"></td>
+                </tr>
+                <tr>
+                    <td class="firstCol">Deductible</td>
+                    <td>:</td>
+                    <td class="dataCol" id="reportDeductible">Banjir</td>
+                </tr>
+            </table>
+            <button class="willGone" style="height:2em; margin-top: 1em;">Check Clauses</button>
+
+            
+            <div id="kronologiArea">
+                <!-- kronologi Box -->
+                <h2 class="reportH2">Kronologi</h2>
+                <textarea name="kronologi" id="reportKronologi" cols="40" rows="15"></textarea>
+            </div>
+            <div id="areaLiability">
+                <!-- Liability List / Box -->
+                <h2 class="reportH2" onclick="showIt()">Liability</h2>
+                <div id="buttonLiaContainer" class="willGone">
+                    <button onclick="checkLiability()">Check Liability</button>
+                    
+                </div>
+                
+                <ul id="reportLiability" >
+                    <li>Lokasi Risiko Sesuai Polis</li>
+                    <li>Tanggal Pelaporan Liable</li>
+                    <li>Risiko Banjir dijamin dalam polis</li>
+                    <li>Appraisement clause 10% > Tidak dikenakan Prorata</li>
+                </ul>
+                <textarea name="kronologi" id="reportLiabilityArea" cols="30" rows="15"></textarea>
+            </div>
+            <div id="adjustmentArea">
+                <!-- Adjustment table / Excel Adjustment -->
+                <h2 class="reportH2">Adjustment</h2>
+                <iframe id="adjustment" width="402" height="500" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=4F261D5931B265B4%21243&authkey=%21AJZErjoCUYxRkJM&em=2&AllowTyping=True&wdHideGridlines=True&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True& edesNext=true&resen=false"></iframe>
+
+            </div>
+            <br><br><br>
+            <br>
+            <br>
+            <div>
+                <!-- Dokumen Pendukung -->
+                <h2 class="reportH2">Dokumen Pendukung</h2>
+                <button style="margin: 10px 0" class="willGone">Add New File</button>
+                <div class="gambarKejadian">
+                    <img src="https://images.bisnis-cdn.com/posts/2022/07/16/1555658/banjir-di-bekasi.jpg" alt="">
+                    <img src="https://akcdn.detik.net.id/visual/2021/02/20/banjir-di-jatipadang_169.jpeg?w=650" alt="">
+                    <img src="https://pict.sindonews.net/dyn/732/content/2015/01/23/31/954739/kebanjiran-aktivitas-pasar-cipulir-nyaris-lumpuh-PKi-thumb.jpg" alt="">
+                </div>
+
+            </div>
+            <div>
+                <!-- Rekomendasi -->
+                <h2 class="reportH2">Rekomendasi</h2>
+                <textarea name="kronologi" id="reportRekomendasi" cols="30" rows="10"></textarea>
+                <!-- <p id="rekomendasi">Berdasarkan analisis dokumen dan perhitungan yang dilakukan, maka kami merekomendasikan untuk setuju atas penyelesaian klaim dengan nilai ganti rugi sebesar  Rp. 141,000,000 sebagai pembayaran penuh dan final.</p> -->
+
+            </div>
+            <div>
+                <label for="progress" id="progress-label">Progress Klaim: 
+                    <input type="text" id="progress" name="progress" list="listProgression" onchange="progressionSurvei()">
+                    <datalist name="progress" id="listProgression" >
+                      <option value="New Claim">New Claim</option>
+                      <option value="Survei">Survei</option>
+                      <option value='Proses permintaan Dokumen'>Proses permintaan Dokumen </option>
+                      <option value="Review Klaim">Review Klaim</option>
+                      <option value="Pengajuan klaim ACC">Pengajuan klaim ACC</option>
+                      <option value="Claim Accepted">Claim Accepted</option>
+                      <option value="Claim Rejected">Claim Rejected</option>
+                      <option value="waiting LoD">waiting LoD</option>
+                      <option value="payment Process">payment Process</option>
+                      <option value="finish">finish</option>
+                      <option value="Salavage on process">Salavage on process</option>
+                    </datalist>
+                </label>
+                <label for="tanggalSurvei" id = "tanggalSurveiLabel" style="visibility: hidden"> Tanggal Survei: 
+                    <input type="date" name="tanggalSurvei" id="tanggalSurvei" >
+                </label>
+            </div>
+        </section>
+        <div class="accButton">
+            <a href="./claim list.html" ><button class="willGone" onclick="saveProgression()">Save Process</button></a>
+            <!-- <a href="./index.html"><button>Accept Claim</button></a>
+            <a href="./index.html"><button>Ajukan Revisi</button></a> -->
+          </div>  
+    </main>
+    <div class="menuContainer"> 
+        <!-- <div>Menu</div> -->
+        <a href="./index.html" class="willGone"><button class="menuButton">Add New List</button></a>
+        <a href="./claim list.html" class="willGone"><button class="menuButton" style="margin-bottom: 70px;">See claim List</button></a>
+        <button class="willGone menuButton" onclick="hideIt()">Hide</button>
+    </div>
+    <script src="claimprogress.js"></script>
+</body>
+</html>

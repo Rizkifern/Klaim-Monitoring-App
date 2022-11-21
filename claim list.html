@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim List</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+    
+</head>
+<body id="claimList">
+    <!-- For Navigating to other Pages atau Menu-->
+    <header>
+        <h1>List Claim on Process</h1>
+    </header>
+    <!-- Table List Claim -->
+    <main id="tableList">
+        <section id="function-buttons">
+          <button>Notification</button>
+          <button id="sortTable">Sort</button>
+          <button id="filterTable" onclick="showPopup(filterPopup)">Filter</button>
+          <button>Search</button>
+        </section>
+          <table class="table" id="theTable">
+          </table>        
+    </main>
+
+    <div class="popup" id="filterPopup">
+      <h2>Filter Data Klaim</h2>
+      <label for="filtering" id="filtering-label">Filter berdasarkan: 
+        <select name="filtering" id="filtering">
+          <option value="careJaminan">Jaminan</option>
+          <option value="noPolis">Nomor Polis</option>
+          <option value='dol'>Date of Loss (YYYY-MM-DD)</option>
+          <option value="cause">Penyebab Kerugian</option>
+          <option value="dml">Tanggal Masuk Laporan (YYYY-MM-DD)</option>
+          <option value="progress">Progress Claim</option>
+          <option value="careTertanggung">Nama Tertanggung</option>
+          <option value="kerugian">Kerugian lebih besar dari:</option>
+        </select>
+      </label>
+      <label for="filterKey" id="filterKey-label">Key: 
+            <input
+              type="text"
+              name="filterKey"
+              id="filterKey"
+            />
+          </label>
+
+      <button id="fClosePopup" class="closePopup" onclick="closePopupAja(filterPopup)">X</button>
+      <button onclick="applyFilter()">Filter</button>
+    </div> 
+
+
+    <div class="menuContainer">
+      <!-- <div>Menu</div> -->
+      <a href="./index.html" ><button class="menuButton">Add New List</button></a>
+    </div>
+    
+    <script src="load.js" ></script>
+    
+    
+
+</body>
+</html>

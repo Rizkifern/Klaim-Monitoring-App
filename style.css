@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+}
+/* Theme 1 */
+:root {
+  --color1:#153462;
+  --color2:rgb(79, 160, 149);
+  --color3:rgb(186, 209, 194);
+  --color4:rgb(246, 246, 201);
+}
+/* Theme 2 */
+/* :root {
+  --color1:rgb(34, 40, 49);
+  --color2:rgb(57, 62, 70);
+  --color3:rgb(0, 173, 181);
+  --color4:rgb(238, 238, 238);
+} */
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  /* coloring */
+  background-color: var(--color4);
+  color: black;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  /* coloring */
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bolder;
+}
+th { 
+  background-color: var(--color2);
+  font-weight: bold;
+}
+
+input,
+textarea,
+select, #submitClaim {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+header { 
+  background-color: var(--color1);
+  padding: 10px;
+  color: var(--color4);
+}
+input, textarea, option, select,#submitClaim {
+  /* coloring */
+  background-color: white;
+  border: 1px solid rgba(186, 209, 194,0.5);
+  color: black;
+  
+}
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+} */
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+#submitClaim {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: var(--color1);
+  color: var(--color4);
+  border-color: white;
+  font-weight: bold;
+  text-decoration: none;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+a {
+  /* coloring */
+  color: #dfdfe2;
+  text-decoration: none;
+}
+/* LIST PAGE */
+
+
+/* Table Things */
+ th, td {
+  border: 1px solid;
+}
+
+
+
+/* Dari Code Pen */
+/* #claimList {
+  /* padding: 2em; */
+/* }  */
+
+table.table { width: 100%; }
+
+.table th { 
+  text-align: center; 
+  padding: 0.25em;
+}
+
+.table td { 
+  text-align: left; 
+  padding: 0.25em;
+}
+
+.table tr { 
+  border-bottom: 1px solid #DDD;
+}
+
+td.edit-buttons { text-align: center; }
+button.process, button.acc, button.finish { 
+  border-radius: 3px; 
+  border: none; 
+  margin: 0 0.25em; 
+  transition: all 0.3s;
+}
+
+button:hover { 
+  box-shadow: 0 0 4px rgba(3,3,3,0.8); 
+  opacity: 0.6;
+}
+
+
+
+@media screen and (max-width: 300px) {
+  tr { 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+    border: 1px solid rgba(3,3,3,0.2);
+  }
+  td, th {
+    /* flex: 1 1 150px; */
+    border: 0.5px solid rgba(3,3,3,0.2);
+    align-items: center;
+    text-align: center;
+  }
+
+}
+.tableButton {
+  width:120px ;
+}
+
+/* Batas Akhir Code Pen */
+
+
+/* STYLING PAGE REPORT */
+
+#report > header {
+  text-align: center;
+}
+#report > header > h1 {
+  margin: 1em 0 0 0;
+}
+
+#reportSection {
+  padding: 2em;
+}
+.dataPolis tr{
+  border: none;
+  
+}
+.firstCol {
+  width: 15%;
+}
+.dataCol {
+  word-wrap: break-word;
+}
+.dataPolis td{
+  /* coloring */
+  /* border: solid var(--color3) 0.5px; */
+  border: solid rgba(3,3,3,0.2) 0.1px;
+  padding-left: 5px;
+}
+#kronologiArea, #adjustmentArea {
+ 
+  display: flex;
+  flex-direction: column;
+}
+.reportH2{
+ margin-top: 1em;
+ margin-bottom: 0;
+}
+
+#kronologiArea > textarea{
+  align-self: center;
+}
+#adjustment {
+  width: 100% !important; 
+  min-height: 50px;
+  align-self: center;
+}
+
+.gambarKejadian {
+  display :flex;
+  flex-wrap: wrap;
+  
+}
+
+.gambarKejadian > img {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+#rekomendasi {
+  text-align: justify;
+}
+
+.accButton{
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+}
+
+.accButton > a > button{
+  width: 100px;
+  height: 50px;
+  font-size: medium;
+}
+
+
+/* POPUP */
+.popup {
+
+  color: black;
+  width: 50%;
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  padding: 10px;
+  background-color: rgb(224, 224, 224);
+  border: solid 2px black;
+  border-radius: 4px;
+  text-align: left;
+  transform: translate(-50%,-50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+.popup > h2 {
+  text-align: center;
+}
+
+.openPopup{
+  visibility: visible;
+  top : 70%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+.popup > label > input {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.popup > label > input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0%);
+}
+.popup > button {
+  display: block;
+  margin: 1em auto;
+  width: 100px;
+  height: 2em;
+  
+}
+.closePopup {
+  position: inherit;
+  top: -20px;
+  right: 0;
+  color: white;
+  font-size: large;
+  background-color: rgb(243, 60, 60);
+  border-radius: 2px;
+  width: 10%;
+}
+
+.hide {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
+}
+#buttonLiaContainer {
+  float: right;
+  transform: translateY(-28px);
+  padding:5px;
+}
+.menuContainer {
+  position: fixed;
+  right: 0%;
+  top:0%;
+  /* display: flex;
+  flex-direction: column;
+  background-color: #F69;
+  padding: 10px;
+  border: #0a0a23; */
+    
+}
+#headerTertanggung:hover {
+  cursor: pointer; 
+
+}
+.menuButton,button {
+  color: var(--color4);
+  border-radius: 5px;
+  margin: 5px;
+  background-color: var(--color2);
+}
+.menuButton:hover{
+  cursor: pointer;
+}
+/* .menuContainer > p {
+  background-color: rgb(99, 214, 235);
+} */
